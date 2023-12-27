@@ -87,6 +87,8 @@ function renderPlaces(places) {
     places.forEach((place) => {
         const latitude = place.location.lat;
         const longitude = place.location.lng;
+		
+		console.log("latitude: ", latitude, " longitude: ", longitude)
 
         // add place icon
         const icon = document.createElement('a-image');
