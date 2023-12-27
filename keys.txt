@@ -1,0 +1,11 @@
+
+https://location.foursquare.com/log-in/
+
+Username: janmenjoyroy@gmail.com
+Password: Z244219a@
+
+API Key Name: location-based-ar
+API Secret: fsq37DGf4WN2AfrAD+Of2jSxMqKrdxDB5B4DOp490DoRXpI=
+
+Client Id: BJUS1TD2RCTFXG13T1BKIBEK2TX01YMH4SSPBROCTCS2CGGX
+Client Secret: OGBY14DM3E1WXLWHPDUKV4RP32MYIOEJJ0VR2VE2YNG43FR4
