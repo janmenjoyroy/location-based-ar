@@ -1,12 +1,12 @@
 window.onload = () => {
 
     // Setting the latitude and longitude using the Geolocation API
-    // navigator.geolocation.getCurrentPosition = function(success, failure) {
-    //     success({ coords: {
-    //         latitude: 32.486622764985288,
+    // navigator.geolocation.getCurrentPosition = function(success, failure) { 
+    //     success({ coords: { 
+    //         latitude: 32.486622764985288, 
     //         longitude: 98.36985785616653,
-
-    //     }, timestamp: Date.now() });
+    
+    //     }, timestamp: Date.now() }); 
     // }
 
     // navigator.geolocation.getCurrentPosition(function (position) {
@@ -46,21 +46,21 @@ window.onload = () => {
 function staticLoadPlaces() {
     return [
         {
-            name: "Gate-09",
+            name: "The Retreat 01",
             location: {
                 lat: 22.486739042916515, // add here latitude if using static data
                 lng: 88.36984015381692 // add here longitude if using static data
             }
         },
         {
-            name: 'Others',
+            name: 'The Retreat 02',
             location: {
                 lat: 22.486727890718882,
                 lng: 88.36991994955132
             }
-        },
+        },        
         {
-            name: 'Restroom',
+            name: 'The Retreat 03',
             location: {
                 lat: 22.486802858550426,
                 lng: 88.3698891041027
@@ -129,9 +129,9 @@ function renderPlaces(places) {
         icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
         icon.setAttribute('name', place.name);
 
-        if(place.name === 'Gate-09')
+        if(place.name === 'The Retreat 01')
             icon.setAttribute('src', './assets/gate-09.png');
-        else if(place.name === 'Restroom')
+        else if(place.name === 'The Retreat 03')
             icon.setAttribute('src', './assets/restroom.jpg');
         else
             icon.setAttribute('src', './assets/map-marker.png');
