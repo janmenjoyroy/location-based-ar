@@ -1,9 +1,21 @@
 window.onload = () => {
-    //let method = 'dynamic';
-	let method = 'static';
 
-    // if you want to statically add places, de-comment following line
-    method = 'static';
+    // Setting the latitude and longitude using the Geolocation API
+    // navigator.geolocation.getCurrentPosition = function(success, failure) {
+    //     success({ coords: {
+    //         latitude: 32.486622764985288,
+    //         longitude: 98.36985785616653,
+
+    //     }, timestamp: Date.now() });
+    // }
+
+    // navigator.geolocation.getCurrentPosition(function (position) {
+    //     console.log(position.coords)
+    // })
+
+    // if you want to dynamically add places, de-comment following line
+    // let method = 'dynamic';
+	let method = 'static';
 
     if (method === 'static') {
         let places = staticLoadPlaces();
@@ -34,10 +46,24 @@ window.onload = () => {
 function staticLoadPlaces() {
     return [
         {
-            name: "The Retreat",
+            name: "Gate-09",
             location: {
-                lat: 22.486622764985288, // add here latitude if using static data
-                lng: 88.36985785616653 // add here longitude if using static data
+                lat: 22.486739042916515, // add here latitude if using static data
+                lng: 88.36984015381692 // add here longitude if using static data
+            }
+        },
+        {
+            name: 'Others',
+            location: {
+                lat: 22.486727890718882,
+                lng: 88.36991994955132
+            }
+        },
+        {
+            name: 'Restroom',
+            location: {
+                lat: 22.486802858550426,
+                lng: 88.3698891041027
             }
         },
         {
@@ -96,13 +122,19 @@ function renderPlaces(places) {
         const latitude = place.location.lat;
         const longitude = place.location.lng;
 		
-		console.log("latitude: ", latitude, " longitude: ", longitude)
+		// console.log("latitude: ", latitude, " longitude: ", longitude)
 
         // add place icon
         const icon = document.createElement('a-image');
         icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
         icon.setAttribute('name', place.name);
-        icon.setAttribute('src', './assets/map-marker.png');
+
+        if(place.name === 'Gate-09')
+            icon.setAttribute('src', './assets/gate-09.png');
+        else if(place.name === 'Restroom')
+            icon.setAttribute('src', './assets/restroom.jpg');
+        else
+            icon.setAttribute('src', './assets/map-marker.png');
 
         // for debug purposes, just show in a bigger scale, otherwise I have to personally go on places...
         // icon.setAttribute('scale', '20, 20');
