@@ -46,21 +46,21 @@ window.onload = () => {
 function staticLoadPlaces() {
     return [
         {
-            name: "The Retreat 01",
+            name: "The Retreat",
             location: {
                 lat: 22.486739042916515, // add here latitude if using static data
                 lng: 88.36984015381692 // add here longitude if using static data
             }
         },
         {
-            name: 'The Retreat 02',
+            name: 'Restroom',
             location: {
                 lat: 22.486727890718882,
                 lng: 88.36991994955132
             }
         },        
         {
-            name: 'The Retreat 03',
+            name: 'Gate-09',
             location: {
                 lat: 22.486802858550426,
                 lng: 88.3698891041027
@@ -129,9 +129,9 @@ function renderPlaces(places) {
         icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
         icon.setAttribute('name', place.name);
 
-        if(place.name === 'The Retreat 01')
+        if(place.name === 'Gate-09')
             icon.setAttribute('src', './assets/gate-09.png');
-        else if(place.name === 'The Retreat 03')
+        else if(place.name === 'Restroom')
             icon.setAttribute('src', './assets/restroom.jpg');
         else
             icon.setAttribute('src', './assets/map-marker.png');
